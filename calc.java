@@ -59,7 +59,7 @@ public class calc {
         while (receivedLine == "" || validation == false) {
             System.out.print("Введите выражение для вычисления или exit, чтобы выйти: ");
             receivedLine = input.nextLine();
-            if (receivedLine == "exit") break;
+            if (receivedLine.equals("exit")) break;
             validation = validateString(receivedLine);
             if (receivedLine == "") System.out.println("Вы ничего не ввели. Попробуйте еще раз.");
             if (!(validation)) throw new Exception ("Ошибка корректности ввода выражения.");
@@ -180,6 +180,7 @@ public class calc {
         String expression = "";
         while (expression != "exit") {
             expression = getLine();
+            if (expression.equals("exit")) break;
             System.out.println(calc(expression));
         }
 
