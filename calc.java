@@ -160,7 +160,7 @@ public class calc {
         else throw new Exception ("Ошибка! Оба числа должны принадлежать одной системе счисления.");
 
         if (operand1int > 10 || operand2int >10
-            || operand1int == 0 || operand2int == 0) throw new Exception ("Ошибка! Введено непоходящее число.");
+            || operand1int == 0 || operand2int == 0) throw new Exception ("Ошибка! Введено неподходящее число.");
 
         switch (operation) {
             case '+' -> result = operand1int + operand2int;
